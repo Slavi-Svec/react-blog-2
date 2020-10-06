@@ -9,7 +9,7 @@ function urlFor(source) {
   return builder.image(source)
 }
 
-export default function OnePost() {
+const OnePost = () => {
   const [postData, setPostData] = useState(null)
   const { slug } = useParams()
 
@@ -40,20 +40,19 @@ export default function OnePost() {
     <div className="bg-gray-200 min-h-screen p-12">
       <div className="container shadow-lg mx-auto bg-green-100 rounded-lg">
         <div className="relative">
-        <div className="absolute h-full w-full flex items-center justify-center p-8">
-
-          <div className="bg-white bg-opacity-75 rounded p-12">
-            <h2 className="text-3xl lg:text-6xl mb-4">{postData.title}</h2>
-            <div className="flex justify-center text-gray-800">
-              <img
-                  className="w-10 h-10 rounded-full"
-                  src={urlFor(postData.authorImage).width(100).url()}
-                  alt="Author is Slavi"
-              />
-              <h4 className="cursive flex items-center pl-2 text-2xl">
-                {postData.name}
-              </h4>
-            </div>
+          <div className="absolute h-full w-full flex items-center justify-center p-8">
+            <div className="bg-white bg-opacity-75 rounded p-12">
+              <h2 className="text-3xl lg:text-6xl mb-4">{postData.title}</h2>
+              <div className="flex justify-center text-gray-800">
+                <img
+                    className="w-10 h-10 rounded-full"
+                    src={urlFor(postData.authorImage).width(100).url()}
+                    alt="Author is Slavi"
+                />
+                <h4 className="cursive flex items-center pl-2 text-2xl">
+                  {postData.name}
+                </h4>
+              </div>
           </div>
         </div>
         <img
@@ -74,3 +73,5 @@ export default function OnePost() {
     </div>
   )
 }
+
+export default OnePost

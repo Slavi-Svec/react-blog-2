@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import sanityClient from '../client.js'
 
-export default function AllPosts() {
+ const  AllPosts =() => {
   const [allPostsData, setAllPosts] = useState(null)
 
   useEffect(() => {
@@ -53,3 +53,5 @@ export default function AllPosts() {
     </div>
   )
 }
+
+export default AllPosts
