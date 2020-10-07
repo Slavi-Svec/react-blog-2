@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import sanityClient from '../client.js'
 
- const  AllPosts =() => {
+ const  AllPosts = () => {
   const [allPostsData, setAllPosts] = useState(null)
 
   useEffect(() => {
@@ -24,7 +24,7 @@ import sanityClient from '../client.js'
   }, [])
 
   return (
-    <div className="bg-green-100 min-h-screen p-12">
+    <div className="bg-blue-100 min-h-screen p-12">
       <div className="container mx-auto">
         <h2 className="text-5xl flex justify-center">Blog Posts 2020</h2>
         <h3 class="text-lg text-gray-500 flex justify-center mb-12">
