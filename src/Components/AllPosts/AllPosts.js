@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import sanityClient from '../client.js'
+import sanityClient from '../../client.js'
+import './style.scss'
 
  const  AllPosts = () => {
   const [allPostsData, setAllPosts] = useState(null)
@@ -24,24 +25,24 @@ import sanityClient from '../client.js'
   }, [])
 
   return (
-    <div className="bg-blue-100 min-h-screen p-12">
-      <div className="container mx-auto">
-        <h2 className="text-5xl flex justify-center">Blog Posts 2020</h2>
-        <h3 class="text-lg text-gray-500 flex justify-center mb-12">
+    <div className="allPosts__background">
+      <div className="allPosts__container">
+        <h2 className="allPosts__blog-title">Blog Posts 2020</h2>
+        <h3 class="allPosts__blog-second-title">
           Welcome to my blog
         </h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allPostsData &&
             allPostsData.map((post, index) => (
               <Link to={"/" + post.slug.current} key={post.slug.current}>
-                <span className="block bg-white block h-64 relative rounded shadow leading-snug border-l-8 border-green-800" key={index}>
+                <span className="allPosts__blog-container" key={index}>
                   <img
-                    className="w-full h-full rounded-r object-cover absolute"
+                    className="allPosts__blog-container-sizes"
                     src={post.mainImage.asset.url}
                     alt=""
                   />
                   <span className="block relative h-full flex justify-end items-end pr-4 pb-4">
-                    <h2 className="text-gray-800 text-lg font-bold px-3 py-4 bg-red-700 text-red-100 bg-opacity-75 rounded">
+                    <h2 className="allPosts__blog-container-text">
                       {post.title}
                     </h2>
                   </span>
