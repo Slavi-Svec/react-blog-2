@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import sanityClient from '../../client.js'
+import Image from '../Image/Image'
+import ProfessorLogo from '../Images/proflogo.png'
+import ProfessorIcon from '../Images/prof.png'
 import './style.scss'
 
- const  AllPosts = () => {
+const AllPosts = () => {
   const [allPostsData, setAllPosts] = useState(null)
 
   useEffect(() => {
@@ -20,21 +23,23 @@ import './style.scss'
       }
     }`
       )
-      .then((data) => setAllPosts(data))
+      .then(data => setAllPosts(data))
       .catch(console.error)
   }, [])
 
   return (
     <div className="allPosts__background">
       <div className="allPosts__container">
+        <div className="allPosts__icon-container">
+          <Image className="allPosts__Professor-Logo" src={ProfessorLogo} />
+          <Image className="allPosts__Professor-Icon" src={ProfessorIcon} />
+        </div>
         <h2 className="allPosts__blog-title">Blog Posts 2020</h2>
-        <h3 class="allPosts__blog-second-title">
-          Welcome to my blog
-        </h3>
+        <h3 class="allPosts__blog-second-title">Welcome to my blog</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allPostsData &&
             allPostsData.map((post, index) => (
-              <Link to={"/" + post.slug.current} key={post.slug.current}>
+              <Link to={'/' + post.slug.current} key={post.slug.current}>
                 <span className="allPosts__blog-container" key={index}>
                   <img
                     className="allPosts__blog-container-sizes"

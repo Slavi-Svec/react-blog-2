@@ -33,12 +33,12 @@ const Navbar = () => {
       <nav className={navbar ? 'navbar active' : 'navbar'}>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
-            <Image className="logo" src={avatarOne} />
+            {/* <Image className="logo" src={avatarOne} /> */}
           </Link>
           <ul className="nav-menu">
             <li className={navbarText ? 'navbarText active' : 'navbarText'}>
               <Link to="/" className="nav-links">
-                Return Home
+                <strong> Return Home</strong>
               </Link>
             </li>
           </ul>
