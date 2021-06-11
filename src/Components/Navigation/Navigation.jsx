@@ -38,7 +38,7 @@ const Navbar = () => {
           <ul className="nav-menu">
             <li className={navbarText ? 'navbarText active' : 'navbarText'}>
               <Link to="/" className="nav-links">
-                <strong> Return Home</strong>
+                <strong> Home</strong>
               </Link>
             </li>
           </ul>
