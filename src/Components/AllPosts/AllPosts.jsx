@@ -32,9 +32,18 @@ const AllPosts = () => {
       <div className="allPosts__container">
         <div className="allPosts__icon-container">
           <Image className="allPosts__Professor-logo" src={ProfessorLogo} />
-          <Image className="allPosts__Professor-Icon" src={ProfessorIcon} />
         </div>
-        <h2 className="allPosts__blog-title">2021</h2>
+        <div className="allPosts__image-container">
+          <Image className="allPosts__Professor-Icon" src={ProfessorIcon} />
+          <div className="allPosts__Professor-board">
+            <ul>
+              <li>Habits</li>
+              <li>Productivity</li>
+              <li>Frugalism</li>
+            </ul>
+          </div>
+        </div>
+        {/* <h2 className="allPosts__blog-title">2021</h2> */}
         <h3 className="allPosts__blog-second-title">Welcome to my blog</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allPostsData &&

@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { NavLink, Link } from 'react-router-dom'
-import Image from '../Image/Image'
-import avatarOne from '../../Components/Images/AvatarLogo3.png'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 const Navbar = () => {
