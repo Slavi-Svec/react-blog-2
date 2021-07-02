@@ -1,6 +1,6 @@
 .allPosts {
   &__background {
-    background-color: #ddeded;
+    // background-color: #ddeded;
     background-color: #ebf8ff;
     min-height: 100vh;
     padding: 3rem;
@@ -16,7 +16,7 @@
     align-items: center;
   }
 
-  &__Professor-Logo {
+  &__Professor-logo {
     width: 950px;
     display: flex;
     flex-direction: column;
@@ -77,5 +77,15 @@
     color: #fff5f5;
     opacity: 0.75;
     border-radius: 0.25rem;
+  }
+
+  @media screen and (max-width: 414px) {
+    &__Professor-Icon {
+      width: 150px;
+      height: 150px;
+    }
+    &__Professor-logo {
+      width: 1000px;
+    }
   }
 }
