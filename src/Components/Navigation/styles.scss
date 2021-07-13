@@ -23,7 +23,7 @@
   text-align: center;
   width: 80vw;
   justify-content: end;
-  margin-right: 32px;
+  //   margin-right: 32px;
   margin-top: 20px;
 }
 
@@ -54,10 +54,7 @@ strong {
 }
 
 @media screen and (max-width: 414px) {
-  strong {
-    display: inline-block;
-    width: 120px;
-    border: 3px solid white;
-    text-align: center;
+  .nav-menu {
+    justify-content: center;
   }
 }
