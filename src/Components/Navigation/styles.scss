@@ -23,15 +23,13 @@
   text-align: center;
   width: 80vw;
   justify-content: end;
-  margin-top: 20px;
+  margin-top: 2.5%;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 8px 16px;
-  height: 100%;
   font-weight: 500;
   font-size: 20px;
 }
@@ -52,8 +50,21 @@ strong {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 75px;
+  }
+  .nav-menu {
+    margin-top: 3%;
+  }
+}
+
 @media screen and (max-width: 414px) {
   .nav-menu {
     justify-content: center;
+    margin-top: 4.5%;
+  }
+  .navbar {
+    height: 65px;
   }
 }
