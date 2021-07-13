@@ -76,3 +76,12 @@ strong {
   border: 3px solid white;
   text-align: center;
 }
+
+@media screen and (max-width: 414px) {
+  strong {
+    display: inline-block;
+    width: 120px;
+    border: 3px solid white;
+    text-align: center;
+  }
+}
