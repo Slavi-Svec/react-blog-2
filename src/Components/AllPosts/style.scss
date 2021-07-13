@@ -28,12 +28,17 @@
   }
 
   &__Professor-board {
-    width: 200px;
-    height: 200px;
+    width: 186px;
+    height: 151px;
     font-size: 30px;
     font-weight: bolder;
+    border: black solid 3px;
     padding-top: 1%;
-    // font-family: 'Montserrat', sans-serif;
+    padding: 0px 5px 0px 5px;
+    box-shadow: 5px 10px 8px #888888;
+    border-radius: 16px;
+    color: white;
+    background-color: #1e817f;
   }
 
   &__image-container {
@@ -51,8 +56,8 @@
   &__blog-second-title {
     display: flex;
     justify-content: center;
-    font-size: 50px;
-    margin-bottom: 3rem;
+    font-size: 60px;
+    margin-bottom: 48px;
     font-family: 'Lemon Jelly Personal Use', sans-serif;
   }
 
@@ -91,17 +96,22 @@
 
   @media screen and (max-width: 414px) {
     &__Professor-Icon {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
     }
 
     &__Professor-board {
-      width: 200px;
-      height: 200px;
+      width: 172px;
+      height: 112px;
+      font-size: 23px;
     }
 
     &__Professor-logo {
       max-width: 124%;
+    }
+
+    &__blog-second-title {
+      font-size: 50px;
     }
   }
 }
