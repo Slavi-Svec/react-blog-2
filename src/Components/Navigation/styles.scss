@@ -1,9 +1,8 @@
 .navbar {
   background: #ebf8ff;
   height: 85px;
-  //   display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  justify-content: flex-end;
   font-size: 1.2rem;
   position: sticky;
   top: 0;
@@ -14,25 +13,6 @@
 .navbar.active {
   background: #c53030;
   transition: 0.7s;
-}
-
-.navbar-logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.logo {
-  width: 60px;
-  height: 60px;
-  margin-top: 10px;
-  justify-self: start;
-  margin-left: 30px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
 }
 
 .nav-menu {
@@ -48,16 +28,12 @@
 }
 
 .nav-links {
-  margin-right: -140px;
-  margin-top: -10px;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   height: 100%;
   font-weight: 500;
-  font-family: brandon-grotesque, HelveticaNeue-Light, 'Helvetica Neue Light',
-    'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-size: 20px;
 }
 
