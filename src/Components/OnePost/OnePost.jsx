@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import sanityClient from "../../client.js"
-import BlockContent from "@sanity/block-content-to-react"
-import imageUrlBuilder from "@sanity/image-url"
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import sanityClient from '../../client.js'
+import BlockContent from '@sanity/block-content-to-react'
+import imageUrlBuilder from '@sanity/image-url'
+import Spinner from '../Spinner/Spinner'
 import './style.scss'
 
 const builder = imageUrlBuilder(sanityClient)
@@ -10,7 +11,7 @@ function urlFor(source) {
   return builder.image(source)
 }
 
-const  OnePost = () => {
+const OnePost = () => {
   const [postData, setPostData] = useState(null)
   const { slug } = useParams()
 
@@ -31,11 +32,11 @@ const  OnePost = () => {
           "authorImage": author->image
        }`
       )
-      .then((data) => setPostData(data[0]))
+      .then(data => setPostData(data[0]))
       .catch(console.error)
   }, [slug])
 
-  if (!postData) return <div>Loading...</div>
+  if (!postData) return <Spinner className="onePost__loading" />
 
   return (
     <section className="onePost">

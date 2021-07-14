@@ -43,7 +43,6 @@ const AllPosts = () => {
             </ul>
           </div>
         </div>
-        {/* <h2 className="allPosts__blog-title">2021</h2> */}
         <h3 className="allPosts__blog-second-title">Welcome to my blog</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allPostsData &&
