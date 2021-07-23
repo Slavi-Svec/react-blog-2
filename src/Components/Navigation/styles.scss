@@ -1,9 +1,9 @@
 .navbar {
   background: #ebf8ff;
-  height: 85px;
+  height: 64px;
   display: flex;
   justify-content: flex-end;
-  font-size: 1.2rem;
+  font-size: 19.2px;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -23,7 +23,6 @@
   text-align: center;
   width: 80vw;
   justify-content: end;
-  margin-top: 2.5%;
 }
 
 .nav-links {
@@ -32,6 +31,7 @@
   text-decoration: none;
   font-weight: 500;
   font-size: 20px;
+  margin-top: 15px;
 }
 
 .navbarText.active {
@@ -51,18 +51,12 @@ strong {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar {
-    height: 75px;
-  }
-  .nav-menu {
-    margin-top: 3%;
-  }
 }
 
 @media screen and (max-width: 414px) {
   .nav-menu {
     justify-content: center;
-    margin-top: 4.5%;
+    // margin-top: 4.5%;
   }
   .navbar {
     height: 65px;
